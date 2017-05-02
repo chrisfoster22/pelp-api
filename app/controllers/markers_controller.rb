@@ -16,7 +16,8 @@ class MarkersController < ApplicationController
   @marker = Marker.new(marker_params)
 
   @marker.save
-  redirect_to @marker
+  @markers = Marker.all
+  render json: @markers
 end
 
 private
