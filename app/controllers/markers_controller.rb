@@ -17,6 +17,7 @@ class MarkersController < ApplicationController
 
   @marker.save
   @markers = Marker.all
+  print "Newly created Marker with following params: #{marker_params}"
   render json: @markers
 end
 
